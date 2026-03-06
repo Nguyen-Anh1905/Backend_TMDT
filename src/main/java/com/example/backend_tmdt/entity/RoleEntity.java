@@ -2,8 +2,7 @@ package com.example.backend_tmdt.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "roles")
@@ -33,6 +32,6 @@ public class RoleEntity {
             joinColumns = @JoinColumn(name = "role_id"),
             inverseJoinColumns = @JoinColumn(name = "permission_id")
     )
-    private Set<PermissionEntity> permissions;
+    private List<PermissionEntity> permissions;
 
 }

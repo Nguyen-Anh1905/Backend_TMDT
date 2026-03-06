@@ -48,6 +48,9 @@ public class VoucherEntity extends BaseEntity {
     @Column(name = "used_count")
     private Integer usedCount;
 
+    @Column(name = "is_active")
+    private Integer isActive;
+
     // voucher - shop (N - 1)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "shop_id", nullable = false)

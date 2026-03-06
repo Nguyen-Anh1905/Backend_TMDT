@@ -17,9 +17,6 @@ public class PaymentEntity extends BaseEntity {
     @Column(name = "payment_id")
     private Long paymentId;
 
-    @Column(name = "order_id")
-    private Long orderId;
-
     @Column(name = "payment_method")
     private String paymentMethod;
 
@@ -30,7 +27,7 @@ public class PaymentEntity extends BaseEntity {
     private Integer amount;
 
     @Column(name = "status")
-    private String status;
+    private Integer status;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", nullable = false)

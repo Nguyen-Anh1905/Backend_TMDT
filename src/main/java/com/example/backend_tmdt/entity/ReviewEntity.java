@@ -19,13 +19,11 @@ public class ReviewEntity extends BaseEntity {
     @Column(name = "review_id")
     private Long reviewId;
 
-    @Column(nullable = false)
-    private Integer rating;
+    @Column(name = "star",nullable = false)
+    private Integer star;
 
-    @Column(columnDefinition = "TEXT")
-    private String comment;
-
-    // ================= RELATIONSHIP =================
+    @Column(name = "content")
+    private String content;
 
     // Review -> User
     @ManyToOne(fetch = FetchType.LAZY)

@@ -17,12 +17,6 @@ public class ReplyEntity extends BaseEntity {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "review_id")
-    private Long reviewId;
-
-    @Column(name = "shop_id")
-    private Long shopId;
-
     @Column(name = "content")
     private String content;
 

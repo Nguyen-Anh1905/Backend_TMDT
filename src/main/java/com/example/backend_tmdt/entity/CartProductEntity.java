@@ -17,14 +17,10 @@ public class CartProductEntity extends BaseEntity {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "cart_id")
-    private Long cartId;
-
-    @Column(name = "product_id")
-    private Long productId;
-
     @Column(name = "quantity")
     private Integer quantity;
+
+
 
     // CartProduct - cart (N-1)
     @ManyToOne(fetch = FetchType.LAZY)

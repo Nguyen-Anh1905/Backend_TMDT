@@ -17,15 +17,11 @@ public class OrderTrackingEntity extends BaseEntity {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "order_id")
-    private Long orderId;
-
     @Column(name = "status")
     private String status;
 
     @Column(name = "location")
     private String location;
-
 
     // OrderTracking - order (N-1)
     @ManyToOne(fetch = FetchType.LAZY)
