@@ -2,7 +2,7 @@ package com.example.backend_tmdt.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "roles")
@@ -23,7 +23,7 @@ public class RoleEntity {
 
     // Role - User (N-N)
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private List<UserEntity> users;
+    private Set<UserEntity> users;
 
     // Role - Permission (N-N)
     @ManyToMany(fetch = FetchType.LAZY)
@@ -32,6 +32,6 @@ public class RoleEntity {
             joinColumns = @JoinColumn(name = "role_id"),
             inverseJoinColumns = @JoinColumn(name = "permission_id")
     )
-    private List<PermissionEntity> permissions;
+    private Set<PermissionEntity> permissions;
 
 }

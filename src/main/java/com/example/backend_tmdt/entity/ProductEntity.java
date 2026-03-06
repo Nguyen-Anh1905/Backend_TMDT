@@ -19,9 +19,6 @@ public class ProductEntity extends BaseEntity {
     @Column(name = "product_id")
     private Long productId;
 
-    @Column(name ="sku", nullable = false, unique = true, length = 50)
-    private String sku;
-
     @Column(name = "product_name", nullable = false)
     private String productName;
 
@@ -36,9 +33,6 @@ public class ProductEntity extends BaseEntity {
 
     @Column(columnDefinition = "JSON")
     private String attributes;
-
-    @Column(nullable = false)
-    private Integer status;
 
     // Product - Category (N - 1)
     @ManyToOne(fetch = FetchType.LAZY)
