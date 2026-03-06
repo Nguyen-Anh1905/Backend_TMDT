@@ -61,7 +61,7 @@ public class UserEntity extends BaseEntity {
 
     // user - order (1-N)
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    private List<OrderDetailEntity> orderDetails;
+    private List<OrderEntity> orders;
 
     // user - review (1 -N)
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)

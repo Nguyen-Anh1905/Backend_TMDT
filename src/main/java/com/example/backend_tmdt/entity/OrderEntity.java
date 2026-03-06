@@ -51,7 +51,7 @@ public class OrderEntity extends BaseEntity {
     private UserEntity user;
 
     // order - orderDetail (1-N)
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
     private List<OrderDetailEntity> orderDetails;
 
     //order - shop (N-1)
@@ -60,7 +60,7 @@ public class OrderEntity extends BaseEntity {
     private ShopEntity shop;
 
     // order - payment (1-1)
-    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "order")
     private PaymentEntity payment;
 
     // Order - orderTracking (1 - N)

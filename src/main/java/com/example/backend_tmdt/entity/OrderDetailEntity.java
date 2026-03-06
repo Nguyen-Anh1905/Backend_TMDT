@@ -17,6 +17,9 @@ public class OrderDetailEntity extends BaseEntity{
     @Column(name = "order_detail_id")
     private Long id;
 
+    @Column(name = "quantity")
+    private Integer quantity;
+
     @Column(name = "price_at_purchase")
     private Integer priceAtPurchase;
 
