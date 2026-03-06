@@ -20,7 +20,8 @@ public class CartProductEntity extends BaseEntity {
     @Column(name = "quantity")
     private Integer quantity;
 
-
+    @Column(name = "price")
+    private Integer price;
 
     // CartProduct - cart (N-1)
     @ManyToOne(fetch = FetchType.LAZY)
