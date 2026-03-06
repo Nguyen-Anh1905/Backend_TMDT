@@ -31,7 +31,7 @@ public class ProductEntity extends BaseEntity {
     @Column(name = "stock_quantity", nullable = false)
     private Integer stockQuantity;
 
-    @Column(columnDefinition = "JSON")
+    @Column(name = "attributes", columnDefinition = "JSON")
     private String attributes;
 
     // Product - Category (N - 1)
