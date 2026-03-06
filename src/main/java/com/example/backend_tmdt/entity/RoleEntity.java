@@ -23,7 +23,7 @@ public class RoleEntity {
 
     // Role - User (N-N)
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private Set<UserEntity> users;
+    private List<UserEntity> users;
 
     // Role - Permission (N-N)
     @ManyToMany(fetch = FetchType.LAZY)
